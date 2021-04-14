@@ -1,0 +1,71 @@
+:root {
+  font-size: 16px;
+  --gris30: #212121;
+  --gris20: #212429;
+  --gris10: #616161;
+}
+
+body {
+  color: var(--gris30);
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: var(--gris30);
+}
+
+header {
+  font-size: 14px;
+  color: var(--gris10);
+}
+
+header a {
+  color: var(--gris20);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--gris30);
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.section-content h3 {
+  font-size: 1.5em;
+  counter-increment: titleList;
+}
+
+pre {
+  background: #fec62d;
+}
+
+.hero {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../img/patron-1.png');
+  height: 350px;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList)". ";
+}
+
+.section-content h3::after {
+content: '';
+width: 32px;
+height: 4px;
+background:var(--gris30);
+display: inline-block;
+}

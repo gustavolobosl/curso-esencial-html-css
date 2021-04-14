@@ -1,0 +1,152 @@
+:root {
+  font-size: 16px;
+  --gris30: #212121;
+  --gris20: #212429;
+  --gris10: #616161;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--gris30);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+main {
+  margin-left: 20px;
+  width: 902px;
+  position: relative;
+  margin: auto;
+}
+
+a {
+  color: var(--gris30);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+header {
+  font-size: 14px;
+  color: var(--gris10);
+  position: absolute;
+  width: 188px;
+  left: -232px;
+}
+
+header li {
+  margin-bottom: 16px;
+}
+
+header a {
+  color: var(--gris20);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--gris30);
+}
+
+nav details summary {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+h1 {
+  font-size: 60px;
+  margin-top: 64px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 64px 0 40px;
+  font-weight: normal;
+}
+
+.section-content h3 {
+  font-size: 1.5em;
+  counter-increment: titleList;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-weight: normal;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+hr {
+  margin: 60px 0px;
+}
+
+pre {
+  background: #fec62d;
+  padding: 40px;
+  font-family: 'Roboto';
+  line-height: 24px;
+}
+
+blockquote {
+  margin: 32px 0;
+  padding-left: 16px;
+  font-size: 24px;
+  border-left: 4px solid var(--gris30);
+  line-height: 24px;
+}
+
+blockquote span {
+  color: var(--gris10)
+}
+
+blockquote span::before {
+  content: '- ';
+}
+
+.hero {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../img/patron-1.png');
+  height: 350px;
+}
+
+.section-content {
+  counter-reset: titleList;
+  margin-top: 165px;
+}
+
+.section-content:first-of-type {
+  margin: 0;
+}
+
+.section-content img {
+  margin-top: 40px;
+}
+
+.section-content + hr {
+  display: none;
+}
+
+.section-content ol li {
+  line-height: 24px;
+}
+
+.section-content ul li {
+  margin-bottom: 16px;
+}
+
+.section-content h3::before {
+  content: counter(titleList)". ";
+}
+
+.section-content h3::after {
+content: '';
+width: 80px;
+height: 4px;
+background:var(--gris30);
+display: inline-block;
+position: absolute;
+left: 0;
+bottom: 0;
+}
